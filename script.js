@@ -1,15 +1,29 @@
 let music = new Audio('jingle-bells.mp3');
 music.loop = true
 
+const wishes = [
+	"Wishing you happiness and health in the New Year.",
+	"May all your dreams come true.",
+	"Wishing you success and good luck this year.",
+	"May the New Year bring you joy and peace.",
+	"Best wishes for the New Year!",
+	"Wishing you love and warm moments.",
+	"May this year be full of new opportunities.",
+	"Cheers to a fresh start!",
+	"Wishing you bright days and happy memories.",
+];
+
 
 function openCard() {
 	let cover = document.getElementById('cover');
 	cover.className = 'open-card';
 
-	music.currentTime = 0;
-	music.play();
+	const randomWish = wishes[Math.floor(Math.random() * wishes.length)]
+	document.getElementById('wish').textContent = randomWish
 
 }
+
+
 
 function closeCard() {
 	let cover = document.getElementById('cover');
