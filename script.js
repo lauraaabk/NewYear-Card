@@ -18,8 +18,11 @@ function openCard() {
 	let cover = document.getElementById('cover');
 	cover.className = 'open-card';
 
-	const randomWish = wishes[Math.floor(Math.random() * wishes.length)]
-	document.getElementById('wish').textContent = randomWish
+	music.currentTime = 0;
+	music.play();
+
+	const randomWish = wishes[Math.floor(Math.random() * wishes.length)];
+	document.getElementById('wish').textContent = randomWish;
 
 }
 
